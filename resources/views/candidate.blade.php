@@ -3,13 +3,14 @@
 @section('content')
 <section>
   <div class="container mt-1 mb-5 p-2">
-    <div class="card my-4">
+    <div class="my-4">
       <div class="candidate">
         <h3>Candidates Search</h3>
+        <hr>
       </div>
       <div class="row g-0">
         <div class="col-xl-8">
-          <div class="card-body p-md-5 text-black">
+          <div class="card-body ml-5 text-black">
             <form action="/candidate" method="POST">
               @csrf
               <div class="mb-4">
@@ -57,46 +58,27 @@
       </form>
 
       {{-- SHOW CANDIDATE --}}
-      <table class="showCandidate">
-        <tr>
-          <th colspan="6">
-            CSIT: 2018 Batch
-          </th>
-        </tr>
-        <tr>
-          <th>S.N</th>
-          <th>Photo </th>
-          <th>Name</th>
-          <th>Party Name</th>
-          <th>Post</th>
-          <th>Party Logo</th>
+      <div class="row m-4">
+        <div class="card mx-4" style="width: 15rem;">
+          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center card-title">Card title</h5>
+          </div>
+        </div>
+        <div class="card mx-4" style="width: 15rem;">
+          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center card-title">Card title</h5>
+          </div>
+        </div>
+        <div class="card mx-4" style="width: 15rem;">
+          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
 
-        </tr>
-        {{-- @foreach ($localCan as $localCandidate )
-        <tr>
-          <td>
-            {{ ++$i}}
-          </td>
-          <td>
-            <img src="{{ url('candidateImage/'.$localCandidate->photo) }}"
-              style="width: 70px; height: 70px; border-radius: 50%; padding:0.4rem ">
-          </td>
-          <td>
-            {{ $localCandidate->name ?? '' }}
-          </td>
-          <td>
-            {{ $localCandidate->partyName ?? '' }}
-          </td>
-          <td>
-            {{ $localCandidate->post ?? '' }}
-          </td>
-          <td>
-            <img src="{{ url('candidateImage/'.$localCandidate->partyLogo) }}"
-              style="width: 70px; height: 70px; padding:0.4rem">
-          </td>
-        </tr>
-        @endforeach --}}
-      </table>
     </div>
 </section>
 @endsection
