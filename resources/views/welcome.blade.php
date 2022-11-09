@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="welcomeSlider">
+<div class="welcomeSlider mt-n5">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

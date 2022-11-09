@@ -59,26 +59,43 @@
 
       {{-- SHOW CANDIDATE --}}
       <div class="row m-4">
-        <div class="card mx-4" style="width: 15rem;">
-          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="text-center card-title">Card title</h5>
-          </div>
-        </div>
-        <div class="card mx-4" style="width: 15rem;">
-          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="text-center card-title">Card title</h5>
-          </div>
-        </div>
-        <div class="card mx-4" style="width: 15rem;">
-          <img src="{{asset('image/bottle.png')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="text-center card-title">Card title</h5>
-          </div>
-        </div>
-      </div>
+        <div class="card mx-4 shadow-sm" style="width: 15rem;">
+          <img src="{{asset('image/candidate.png')}}" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <img src="{{asset('image/bottle.png')}}" style="width: 5rem;" alt="...">
+            <div class="">
+              <h5 class="text-center card-title">Bottle</h5>
+              <h6 class="text-center">Sagar Chhetri</h6>
+              <h6 class="text-center">CSIT( 2018 )</h6>
 
-    </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mx-4 shadow-sm" style="width: 15rem;">
+          <img src="{{asset('image/candidate.png')}}" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <img src="{{asset('image/bottle.png')}}" style="width: 5rem;" alt="...">
+            <div class="">
+              <h5 class="text-center card-title">Bottle</h5>
+              <h6 class="text-center">Sagar Chhetri</h6>
+              <h6 class="text-center">CSIT( 2018 )</h6>
+
+            </div>
+          </div>
+        </div>
+        <div class="card mx-4 shadow-sm" style="width: 15rem;">
+          <img src="{{asset('image/candidate.png')}}" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <img src="{{asset('image/bottle.png')}}" style="width: 5rem;" alt="...">
+            <div class="">
+              <h5 class="text-center card-title">Bottle</h5>
+              <h6 class="text-center">Sagar Chhetri</h6>
+              <h6 class="text-center">CSIT( 2018 )</h6>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
 </section>
 @endsection

@@ -1,9 +1,11 @@
-<x-navbar />
+@extends('layouts.app')
+
+@section('content')
 <section>
-<div class="candidate">
-  <h3>RESULT</h3>
-</div>
-<div class="container py-5 h-100 mt-1 mb-5">
+  <div class="candidate">
+    <h3>RESULT</h3>
+  </div>
+  <div class="container py-5 h-100 mt-1 mb-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
         <div class="card  my-4">
@@ -83,31 +85,31 @@
             @if ($result==1)
             @if($can)
 
-          <div class="winnerContainer border rounded">
-          <h5>{{ $can->province }} : {{ $can->district }}</h5>
-            <h3>!!! WINNER !!!</h3>
+            <div class="winnerContainer border rounded">
+              <h5>{{ $can->province }} : {{ $can->district }}</h5>
+              <h3>!!! WINNER !!!</h3>
 
-            <div class="winner">
-              <img src="{{ url('candidateImage/'.$can->photo) }}" style="width: 70px; height: 70px; border-radius:50%; padding:0.1rem">
+              <div class="winner">
+                <img src="{{ url('candidateImage/'.$can->photo) }}"
+                  style="width: 70px; height: 70px; border-radius:50%; padding:0.1rem">
 
+              </div>
+              <h3>{{$can->name}} ({{ $can->partyName }}) <img src="{{ url('candidateImage/'.$can->partyLogo) }}"
+                  style="width: 40px; height: 40px; border-radius:50%; padding:0.1rem">
+              </h3>
+              <h3><b>Votes:</b> {{$can->votes}} </h3>
             </div>
-            <h3>{{$can->name}} ({{ $can->partyName }}) <img src="{{ url('candidateImage/'.$can->partyLogo) }}" style="width: 40px; height: 40px; border-radius:50%; padding:0.1rem">
-            </h3>
-            <h3><b>Votes:</b> {{$can->votes}} </h3>
-          </div>
-          
-          @endif
-          @else
-          <div class="msg d-flex justify-content-center mb-3">
-            <h4>Result is not published.</h4>
 
             @endif
+            @else
+            <div class="msg d-flex justify-content-center mb-3">
+              <h4>Result is not published.</h4>
 
+              @endif
+
+
+            </div>
 
           </div>
-
-        </div>
 </section>
-        <x-footer/>
-        <!-- Custom Script to display district corresponding to PROVINCE -->
-        <script src="{{ asset('js/custom.js')}}"> </script>
+@endsection
